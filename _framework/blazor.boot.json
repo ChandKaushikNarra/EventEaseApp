@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "EventEaseApp",
   "resources": {
-    "hash": "sha256-p9K9OesrPwtGZsRme6AS4QQ3DZTYrPHJm6Xn6XT1Vx0=",
+    "hash": "sha256-pQMIUd7DwHL8ET2xwwHtfD6IcmODB5hI2+20ScWxUZc=",
     "jsModuleNative": {
       "dotnet.native.8.0.17.qnqnu9is6n.js": "sha256-YyxJV6dv935qHoQAmjB+2qRjHeGpm4SyWxE0T/KvsIE="
     },
@@ -17,7 +17,7 @@
       "icudt_no_CJK.dat": "sha256-L7sV7NEYP37/Qr2FPCePo5cJqRgTXRwGHuwF5Q+0Nfs="
     },
     "assembly": {
-      "EventEaseApp.wasm": "sha256-FaUGJC7iRQivqYWAYU0HdUjRNmO+inxnsvDlkWTb8rs=",
+      "EventEaseApp.wasm": "sha256-fhr0yKrPUquxVcg/QiRVTK9pdjDhcjzfZTFcdciaW9Y=",
       "Microsoft.AspNetCore.Components.Forms.wasm": "sha256-IQMRRr8RLceQKPkjt2yZanGwPumo5Nj+YGJZ11Hm3lM=",
       "Microsoft.AspNetCore.Components.wasm": "sha256-j/zMOmUX3qi2PpmLePXRRIJEqLX7M8eOTU2hkxDck2c=",
       "Microsoft.AspNetCore.Components.Web.wasm": "sha256-0Siw1TYM7gWtOEvIjUZqxX503wAdgtoVMAvDV6Qtr48=",

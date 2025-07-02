@@ -1,0 +1,15 @@
+@using EventEaseApp.Models
+@code {
+    [Parameter]
+    public EventCardModel Event { get; set; }
+}
+
+<div class="event-card">
+    <img src="@Event.ImageUrl" alt="Event Image" class="event-image" />
+    <div class="event-details">
+        <h2>@Event.Title</h2>
+        <p class="event-date">@Event.Date</p>
+        <p class="event-location">@Event.Location</p>
+        <p class="event-description">@Event.Description</p>
+    </div>
+</div>

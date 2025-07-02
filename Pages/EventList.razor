@@ -1,0 +1,51 @@
+@page "/event-list"
+@using EventEaseApp.Models
+
+<h1>Event List</h1>
+
+@if (isLoading)
+{
+    <div class="spinner-border text-primary" role="status">
+        <span class="visually-hidden">Loading...</span>
+    </div>
+}
+else
+{
+    @foreach (var evt in Events)
+    {
+        <EventCard Event="evt" @key="evt.Id" />
+    }
+}
+
+@code {
+    private IReadOnlyList<EventCardModel> Events;
+    private bool isLoading = true;
+
+    protected override async Task OnInitializedAsync()
+    {
+        // Simulate async data fetch
+        await Task.Delay(1000);
+        Events = new List<EventCardModel>
+        {
+            new EventCardModel
+            {
+                Id = 1,
+                Title = "Tech Conference 2025",
+                Date = "July 15, 2025",
+                Location = "New York City",
+                Description = "Join us for a day of tech talks and networking.",
+                ImageUrl = "https://via.placeholder.com/320x180.png?text=Event+1"
+            },
+            new EventCardModel
+            {
+                Id = 2,
+                Title = "Music Fest",
+                Date = "August 10, 2025",
+                Location = "Los Angeles",
+                Description = "A festival of music and fun.",
+                ImageUrl = "https://via.placeholder.com/320x180.png?text=Event+2"
+            }
+        };
+        isLoading = false;
+    }
+}

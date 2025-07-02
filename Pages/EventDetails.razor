@@ -1,0 +1,54 @@
+@page "/event-details/{EventId:int}"
+@using EventEaseApp.Models
+@inject NavigationManager Navigation
+
+<h1>Event Details</h1>
+
+@if (Event != null)
+{
+    <EventCard Event="Event" />
+    <button @onclick="GoToRegistration">Register</button>
+}
+else
+{
+    <p>Event not found.</p>
+}
+
+@code {
+    [Parameter]
+    public int EventId { get; set; }
+
+    private EventCardModel Event;
+
+    protected override void OnInitialized()
+    {
+        var events = new List<EventCardModel>
+        {
+            new EventCardModel
+            {
+                Id = 1,
+                Title = "Tech Conference 2025",
+                Date = "July 15, 2025",
+                Location = "New York City",
+                Description = "Join us for a day of tech talks and networking.",
+                ImageUrl = "https://via.placeholder.com/320x180.png?text=Event+1"
+            },
+            new EventCardModel
+            {
+                Id = 2,
+                Title = "Music Fest",
+                Date = "August 10, 2025",
+                Location = "Los Angeles",
+                Description = "A festival of music and fun.",
+                ImageUrl = "https://via.placeholder.com/320x180.png?text=Event+2"
+            }
+        };
+
+        Event = events.FirstOrDefault(e => e.Id == EventId);
+    }
+
+    void GoToRegistration()
+    {
+        Navigation.NavigateTo($"/event-registration/{EventId}");
+    }
+}

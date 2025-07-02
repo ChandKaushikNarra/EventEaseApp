@@ -1,0 +1,57 @@
+@page "/event-registration"
+@using System.ComponentModel.DataAnnotations
+@inject UserSessionService Session
+@inject AttendanceService Attendance
+
+<h3>Event Registration</h3>
+
+<EditForm Model="@registration" OnValidSubmit="HandleValidSubmit">
+    <DataAnnotationsValidator />
+    <ValidationSummary />
+
+    <div class="mb-3">
+        <label>Name</label>
+        <InputText class="form-control" @bind-Value="registration.Name" />
+        <ValidationMessage For="@(() => registration.Name)" />
+    </div>
+    <div class="mb-3">
+        <label>Email</label>
+        <InputText class="form-control" @bind-Value="registration.Email" />
+        <ValidationMessage For="@(() => registration.Email)" />
+    </div>
+    <button type="submit" class="btn btn-primary">Register</button>
+</EditForm>
+
+@if (success)
+{
+    <div class="alert alert-success mt-3">
+        Registration successful!
+    </div>
+}
+
+@code {
+    private RegistrationModel registration = new();
+    private bool success = false;
+
+    private void HandleValidSubmit()
+    {
+        // Track user session
+        Session.UserName = registration.Name;
+        Session.IsRegistered = true;
+
+        // Mark attendance for event 1
+        Attendance.MarkAttendance(1, registration.Name);
+
+        success = true;
+    }
+
+    public class RegistrationModel
+    {
+        [Required(ErrorMessage = "Name is required")]
+        public string? Name { get; set; }
+
+        [Required(ErrorMessage = "Email is required")]
+        [EmailAddress(ErrorMessage = "Invalid email address")]
+        public string? Email { get; set; }
+    }
+}

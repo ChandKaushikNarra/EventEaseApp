@@ -1,0 +1,2 @@
+C:\Users\chand\EventEaseApp\bin\Release\net8.0\publish\global.json
+C:\Users\chand\EventEaseApp\bin\Release\net8.0\publish\web.config

@@ -186,6 +186,22 @@ wasm_invoke_viiiiii (void *target_func, MonoInterpMethodArguments *margs)
 }
 
 static void
+wasm_invoke_viii (void *target_func, MonoInterpMethodArguments *margs)
+{
+	typedef void (*T)(int arg_0, int arg_1, int arg_2);
+	T func = (T)target_func;
+	func (mono_wasm_interp_method_args_get_iarg (margs, 0), mono_wasm_interp_method_args_get_iarg (margs, 1), mono_wasm_interp_method_args_get_iarg (margs, 2));
+}
+
+static void
+wasm_invoke_viiiiiii (void *target_func, MonoInterpMethodArguments *margs)
+{
+	typedef void (*T)(int arg_0, int arg_1, int arg_2, int arg_3, int arg_4, int arg_5, int arg_6);
+	T func = (T)target_func;
+	func (mono_wasm_interp_method_args_get_iarg (margs, 0), mono_wasm_interp_method_args_get_iarg (margs, 1), mono_wasm_interp_method_args_get_iarg (margs, 2), mono_wasm_interp_method_args_get_iarg (margs, 3), mono_wasm_interp_method_args_get_iarg (margs, 4), mono_wasm_interp_method_args_get_iarg (margs, 5), mono_wasm_interp_method_args_get_iarg (margs, 6));
+}
+
+static void
 wasm_invoke_iiiiiiiii (void *target_func, MonoInterpMethodArguments *margs)
 {
 	typedef int (*T)(int arg_0, int arg_1, int arg_2, int arg_3, int arg_4, int arg_5, int arg_6, int arg_7);
@@ -206,27 +222,11 @@ wasm_invoke_iiiiiiiiii (void *target_func, MonoInterpMethodArguments *margs)
 }
 
 static void
-wasm_invoke_viiiiiii (void *target_func, MonoInterpMethodArguments *margs)
-{
-	typedef void (*T)(int arg_0, int arg_1, int arg_2, int arg_3, int arg_4, int arg_5, int arg_6);
-	T func = (T)target_func;
-	func (mono_wasm_interp_method_args_get_iarg (margs, 0), mono_wasm_interp_method_args_get_iarg (margs, 1), mono_wasm_interp_method_args_get_iarg (margs, 2), mono_wasm_interp_method_args_get_iarg (margs, 3), mono_wasm_interp_method_args_get_iarg (margs, 4), mono_wasm_interp_method_args_get_iarg (margs, 5), mono_wasm_interp_method_args_get_iarg (margs, 6));
-}
-
-static void
 wasm_invoke_viiiiiiii (void *target_func, MonoInterpMethodArguments *margs)
 {
 	typedef void (*T)(int arg_0, int arg_1, int arg_2, int arg_3, int arg_4, int arg_5, int arg_6, int arg_7);
 	T func = (T)target_func;
 	func (mono_wasm_interp_method_args_get_iarg (margs, 0), mono_wasm_interp_method_args_get_iarg (margs, 1), mono_wasm_interp_method_args_get_iarg (margs, 2), mono_wasm_interp_method_args_get_iarg (margs, 3), mono_wasm_interp_method_args_get_iarg (margs, 4), mono_wasm_interp_method_args_get_iarg (margs, 5), mono_wasm_interp_method_args_get_iarg (margs, 6), mono_wasm_interp_method_args_get_iarg (margs, 7));
-}
-
-static void
-wasm_invoke_viii (void *target_func, MonoInterpMethodArguments *margs)
-{
-	typedef void (*T)(int arg_0, int arg_1, int arg_2);
-	T func = (T)target_func;
-	func (mono_wasm_interp_method_args_get_iarg (margs, 0), mono_wasm_interp_method_args_get_iarg (margs, 1), mono_wasm_interp_method_args_get_iarg (margs, 2));
 }
 
 static void

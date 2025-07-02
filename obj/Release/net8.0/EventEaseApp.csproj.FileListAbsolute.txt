@@ -1030,3 +1030,4 @@ C:\Users\chand\EventEaseApp\obj\Release\net8.0\EventEaseApp.dll
 C:\Users\chand\EventEaseApp\obj\Release\net8.0\refint\EventEaseApp.dll
 C:\Users\chand\EventEaseApp\obj\Release\net8.0\EventEaseApp.pdb
 C:\Users\chand\EventEaseApp\obj\Release\net8.0\ref\EventEaseApp.dll
+C:\Users\chand\EventEaseApp\obj\Release\net8.0\EventEaseApp.sourcelink.json

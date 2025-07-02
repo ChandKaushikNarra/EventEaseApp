@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "NxurXePK1n1SlAeCqYd7vVMRoziH41uSJoRxSYj9VEU=",
+  "Hash": "dMnqvK5zYLnHaBG/82cM8mL+G3K4xgxF0L0zh1DEkVs=",
   "Source": "EventEaseApp",
   "BasePath": "/",
   "Mode": "Root",
@@ -7824,6 +7824,25 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\css\\app.css"
+    },
+    {
+      "Identity": "C:\\Users\\chand\\EventEaseApp\\wwwroot\\css\\event-card.css",
+      "SourceId": "EventEaseApp",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\chand\\EventEaseApp\\wwwroot\\",
+      "BasePath": "/",
+      "RelativePath": "css/event-card.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "AssetMergeBehavior": "PreferTarget",
+      "AssetMergeSource": "",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\css\\event-card.css"
     },
     {
       "Identity": "C:\\Users\\chand\\EventEaseApp\\wwwroot\\favicon.png",

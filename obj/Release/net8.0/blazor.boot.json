@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "EventEaseApp",
   "resources": {
-    "hash": "sha256-ckrN0K2WP4QuRskpfzomAFYaeQ2KFGT6pXbmJxWmrhA=",
+    "hash": "sha256-LjXIvPI8mPMYyuQJ6hDcTBCBXPSMCd4t5HUlyNdNqy0=",
     "jsModuleNative": {
       "dotnet.native.8.0.17.b342y3isvy.js": "sha256-YyxJV6dv935qHoQAmjB+2qRjHeGpm4SyWxE0T/KvsIE="
     },
@@ -208,10 +208,10 @@
       "mscorlib.wasm": "sha256-flmBXVpp8uDpWBNEJuRkqo3Qnir1KADo5a1rCQISkPs=",
       "netstandard.wasm": "sha256-iuCVrIBmiGbXpNVvYkBmSt16BNEjbbD82vYrtHimftc=",
       "System.Private.CoreLib.wasm": "sha256-1Xa/xaUoA/iRxpDqZPUUzL8QaTawkoJLhGmxtRv9ZJI=",
-      "EventEaseApp.wasm": "sha256-t/qSjk/k5Jf1fvz2x1ATRHtUfcMyPrMxGkN3cvb32WE="
+      "EventEaseApp.wasm": "sha256-Aa+pEBkjJS0j4y+X0f2lgT0ZhpX+I5euw3SdSou8VPw="
     },
     "pdb": {
-      "EventEaseApp.pdb": "sha256-ub88iwkVCB3jFMp2t+20/LU2n3Yz0GydsuKTEMTfpjM="
+      "EventEaseApp.pdb": "sha256-G9ewxHcEKTDkZZEVDoQltbhM64CNaYq1/6uy26G6d1Q="
     }
   },
   "cacheBootResources": true,
